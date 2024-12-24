@@ -6,11 +6,11 @@ import { FeaturesSection } from "@/components/features-section"
 import { PricingSection } from "@/components/pricing-section"
 import { FaqSection } from "@/components/faq-section"
 import { ThemeProvider } from "@/components/theme-provider"
-import { SITE_CONFIGS } from "./sites/config"
+import { site1Config } from "@/config/sites/site1.config"
 
 export default function Home() {
   return (
-    <ThemeProvider theme={SITE_CONFIGS.site1.theme}>
+    <ThemeProvider theme={site1Config.theme}>
       <BaseLayout>
         <HeroSection />
         <FeaturesSection />
