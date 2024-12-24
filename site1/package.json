@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "my-sites-components": "^1.0.0"
+    // ... other dependencies
+  }
+} 
