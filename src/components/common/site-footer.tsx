@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useSite } from '@/lib/site-context'
-import Image from "next/image"
+
 
 export function SiteFooter() {
   const { config } = useSite()
@@ -13,8 +13,7 @@ export function SiteFooter() {
         <div className="grid gap-8 md:grid-cols-3">
           <div>
             <Link href="/" className="flex items-center space-x-2">
-              <Image src="/logo.svg" alt={config.name} width={32} height={32} />
-              <span className="font-bold">{config.name}</span>
+              <span className="text-xl font-extrabold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent hover:from-primary/80 hover:to-primary/40 transition-colors">{config.name}</span>
             </Link>
             <p className="mt-4 max-w-xs text-muted-foreground">
               {config.description}

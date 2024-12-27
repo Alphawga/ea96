@@ -10,4 +10,11 @@ export type ThemeConfig = {
   }
   borderRadius: string
   spacing: Record<string, string>
+  background?: {
+      type: 'image' | 'video' | 'pattern'
+      src: string
+      alt: string
+      overlay?: boolean
+      overlayOpacity?: number
+  }
 } 

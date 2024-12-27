@@ -1,4 +1,6 @@
 import { SiteProvider } from "@/components/site-provider"
+import { ThemeProvider } from "next-themes"
+import { Background } from "@/components/background"
 
 export default function Site1Layout({
   children,
@@ -6,8 +8,15 @@ export default function Site1Layout({
   children: React.ReactNode
 }) {
   return (
-    <SiteProvider siteId="site1">
-      {children}
-    </SiteProvider>
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+    >
+      <SiteProvider siteId="site1">
+        <Background className="dark:opacity-20"  />
+        {children}
+      </SiteProvider>
+    </ThemeProvider>
   )
 } 

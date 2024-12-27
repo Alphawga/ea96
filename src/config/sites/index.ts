@@ -5,6 +5,7 @@ import type { SiteConfig } from './types'
 export const siteConfigs = {
   site1: site1Config,
   site2: site2Config,
+
 } as const
 
 export type SiteId = keyof typeof siteConfigs

@@ -1,6 +1,5 @@
-
-import { SiteFooter } from "../common/site-footer"
-import { SiteHeader } from "../common/site-header"
+import { SiteHeader } from "@/components/common/site-header"
+import { SiteFooter } from "@/components/common/site-footer"
 
 interface BaseLayoutProps {
   children: React.ReactNode
@@ -8,11 +7,13 @@ interface BaseLayoutProps {
   footerVariant?: 'default' | 'minimal' | 'expanded'
 }
 
-export function BaseLayout({ children }: BaseLayoutProps) {
+export function BaseLayout({ 
+  children,
+}: BaseLayoutProps) {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="relative min-h-screen">
       <SiteHeader />
-      <main className="flex-1">
+      <main className="mx-auto w-full max-w-screen-2xl">
         {children}
       </main>
       <SiteFooter />

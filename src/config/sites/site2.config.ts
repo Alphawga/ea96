@@ -2,37 +2,71 @@ import { SiteConfig } from './types'
 
 export const site2Config: SiteConfig = {
   id: 'site2',
-  name: 'Site Two',
-  description: 'Another amazing platform',
+  name: 'ContentPro',
+  description: 'Professional Content Review & Enhancement',
   basePath: '/site2',
   theme: {
     colors: {
-      primary: '#2563EB',
-      secondary: '#059669',
-      accent: '#D97706',
+      primary: '#FF6B6B',
+      secondary: '#4ECDC4',
+      accent: '#45B7D1',
     },
     fonts: {
-      heading: 'Inter',
+      heading: 'Cal Sans',
       body: 'Inter',
     },
-    borderRadius: '0.5rem',
+    borderRadius: '1rem',
     spacing: {
       sm: '0.5rem',
       md: '1rem',
       lg: '2rem',
       xl: '4rem'
+    },
+    background: {
+      type: 'image',
+      src: '/backgrounds/site2.jpg',
+      alt: 'ContentPro Background',
+      overlay: true,
+      overlayOpacity: 0.8,
     }
   },
   sections: {
     hero: {
-      title: 'Welcome to Site Two',
-      subtitle: 'Another Amazing Platform',
+      title: 'Elevate Your Content with AI-Powered Precision',
+      subtitle: 'Transform your writing from good to exceptional with our advanced content enhancement platform',
+      badge: '✨ AI-Enhanced Review',
+      animation: {
+        title: 'slide',
+        content: 'stagger',
+        duration: 0.7
+      },
       cta: {
         primary: {
-          text: 'Get Started',
-          href: '/get-started'
+          text: 'Start Writing',
+          href: '/start'
+        },
+        secondary: {
+          text: 'View Demo',
+          href: '#demo'
         }
-      }
+      },
+      features: [
+        {
+          icon: '🎯',
+          title: 'Precision Review',
+          description: 'Get detailed feedback on grammar, style, and tone'
+        },
+        {
+          icon: '⚡',
+          title: 'Instant Analysis',
+          description: 'Receive feedback in seconds, not hours'
+        },
+        {
+          icon: '🔄',
+          title: 'Unlimited Revisions',
+          description: 'Perfect your content with multiple passes'
+        }
+      ]
     },
     features: {
       title: 'Features',

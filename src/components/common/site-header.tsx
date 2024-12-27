@@ -2,14 +2,10 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { MoonIcon } from 'lucide-react'
 import { useSite } from '@/lib/site-context'
-import Image from "next/image"
+import { ThemeSwitcher } from "@/components/theme-switcher"
 
-interface NavigationItem {
-  name: string
-  href: string
-}
+
 
 export function SiteHeader() {
   const { config } = useSite()
@@ -18,11 +14,10 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
-          <Image src="/logo.svg" alt="GrammarKoach" width={32} height={32} />
-          <span className="font-bold">GRAMMARKOACH</span>
+          <span className="text-xl font-extrabold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent hover:from-primary/80 hover:to-primary/40 transition-colors">{config.name}</span>
         </Link>
         <nav className="flex items-center space-x-6">
-          {config.navigation.primary.map((item: NavigationItem) => (
+          {config.navigation.primary.map((item) => (
             <Link 
               key={item.href}
               href={`${config.basePath}${item.href}`}
@@ -31,11 +26,10 @@ export function SiteHeader() {
               {item.name}
             </Link>
           ))}
-          <Button variant="ghost" size="icon" className="mr-2">
-            <MoonIcon className="h-5 w-5" />
-            <span className="sr-only">Toggle theme</span>
+          <ThemeSwitcher />
+          <Button className="bg-primary hover:bg-primary/90">
+            Get Started
           </Button>
-          <Button className="bg-indigo-600 hover:bg-indigo-700">Get Started</Button>
         </nav>
       </div>
     </header>

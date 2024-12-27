@@ -11,11 +11,16 @@ export interface SiteConfig {
     features: {
       title: string
       description: string
+
       items: Array<{
         title: string
         description: string
         icon: 'ClipboardCheck' | 'Clock' | 'Search'
         number: string
+        image?: {
+            src: string
+            alt: string
+          }
       }>
     }
     pricing: {
@@ -51,6 +56,38 @@ export interface NavigationItem {
 export interface HeroContent {
   title: string
   subtitle: string
+  badge?: string
+  image?: {
+    src: string
+    alt: string
+  }
+  
+  media?: {
+    background_type: 'image' | 'video' | 'pattern'
+    image?: {
+      src: string
+      alt: string
+      overlay?: boolean
+      overlayOpacity?: number
+    }
+    video?: {
+      src: string
+      poster?: string
+      muted?: boolean
+      loop?: boolean
+      autoPlay?: boolean
+    }
+    pattern?: {
+      type: 'dots' | 'grid' | 'waves'
+      color?: string
+      opacity?: number
+    }
+  }
+  animation?: {
+    title?: 'fade' | 'slide' | 'typing'
+    content?: 'fade' | 'slide' | 'stagger'
+    duration?: number
+  }
   cta: {
     primary: {
       text: string
@@ -61,4 +98,9 @@ export interface HeroContent {
       href: string
     }
   }
+  features?: Array<{
+    icon: string
+    title: string
+    description: string
+  }>
 } 
