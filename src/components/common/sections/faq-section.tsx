@@ -1,7 +1,6 @@
 'use client'
 
 import { useSite } from "@/lib/site-context"
-import { AnimationWrapper } from "@/components/animation-wrapper"
 import {
   Accordion,
   AccordionContent,

@@ -50,7 +50,7 @@ export default function Testimonials() {
               viewport={{ once: true }}
             >
               <div className="bg-white p-8 rounded-2xl">
-                <p className="text-gray-600 mb-6">"{testimonial.content}"</p>
+                <p className="text-gray-600 mb-6">{testimonial.content}</p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                     <Image

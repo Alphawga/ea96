@@ -28,7 +28,7 @@ export default function ForwardThinking() {
                 <span className="text-gray-500">Writing Solutions</span>
               </h2>
               <p className="text-gray-600 mb-8">
-                We've built a dynamic platform focused on empowering aspiring writers to master the necessary skills for both launching and scaling their content creation journey.
+                We&apos;ve built a dynamic platform focused on empowering aspiring writers to master the necessary skills for both launching and scaling their content creation journey.
               </p>
               <p className="text-gray-600 mb-8">
                 Cognizant of the entire spectrum, we meticulously navigate through the phases, commencing from the germination of an idea, extending to the intricate stages of expansion, resiliently embracing setbacks.
